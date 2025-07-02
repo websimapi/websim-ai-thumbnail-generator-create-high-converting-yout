@@ -283,22 +283,16 @@ Respond with actionable insights in a concise format.`;
         this.analysisContainer.style.display = 'block';
     }
     
-    async downloadThumbnail(url, filename) {
-        try {
-            const response = await fetch(url);
-            const blob = await response.blob();
-            const downloadUrl = window.URL.createObjectURL(blob);
-            
-            const link = document.createElement('a');
-            link.href = downloadUrl;
-            link.download = `${filename}.png`;
-            link.click();
-            
-            window.URL.revokeObjectURL(downloadUrl);
-        } catch (error) {
-            console.error('Download failed:', error);
-            this.showError('Download failed. Please try again.');
-        }
+    downloadThumbnail(url, filename) {
+        // This approach avoids potential CORS issues with fetch and is more reliable for downloads.
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${filename}.png`;
+        
+        // Append to the document, click, and then remove
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     }
     
     async copyToClipboard(url) {
@@ -427,4 +421,3 @@ document.querySelectorAll('.input-panel, .results-panel, .example-card').forEach
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
-
