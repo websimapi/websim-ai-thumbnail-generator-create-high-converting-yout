@@ -283,16 +283,35 @@ Respond with actionable insights in a concise format.`;
         this.analysisContainer.style.display = 'block';
     }
     
-    downloadThumbnail(url, filename) {
-        // This approach avoids potential CORS issues with fetch and is more reliable for downloads.
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = `${filename}.png`;
-        
-        // Append to the document, click, and then remove
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+    async downloadThumbnail(url, filename) {
+        try {
+            // Using fetch to get the image data as a blob, which works for cross-origin images.
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.statusText}`);
+            }
+            const blob = await response.blob();
+            
+            // Create an object URL for the blob.
+            const objectUrl = URL.createObjectURL(blob);
+            
+            // Create a temporary link to trigger the download.
+            const link = document.createElement('a');
+            link.href = objectUrl;
+            link.download = `${filename}.png`;
+            
+            // Append to the document, click, and then remove.
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Clean up by revoking the object URL to free up memory.
+            URL.revokeObjectURL(objectUrl);
+            this.showSuccess('Download started!');
+        } catch (error) {
+            console.error('Download failed:', error);
+            this.showError('Download failed. Please try again.');
+        }
     }
     
     async copyToClipboard(url) {
