@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Thumbnail Generator - Create High-Converting YouTube Thumbnails</title>
+    <meta name="description" content="Generate high-conversion YouTube thumbnails using AI. Create engaging thumbnails with optimal facial expressions, colors, and text placement for maximum click-through rates.">
+    <meta name="keywords" content="YouTube thumbnail generator, AI thumbnail maker, high conversion thumbnails, YouTube SEO, click-through rate optimization, video marketing">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AI Thumbnail Generator - High-Converting YouTube Thumbnails">
+    <meta property="og:description" content="Create stunning, high-conversion YouTube thumbnails using AI technology. Optimize for maximum engagement and click-through rates.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai-thumbnail-generator.com">
+    <meta property="og:image" content="https://ai-thumbnail-generator.com/og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Thumbnail Generator - High-Converting YouTube Thumbnails">
+    <meta name="twitter:description" content="Generate high-conversion YouTube thumbnails using AI. Maximize your video's click-through rate.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "AI Thumbnail Generator",
+        "url": "https://ai-thumbnail-generator.com",
+        "description": "AI-powered YouTube thumbnail generator that creates high-conversion thumbnails",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Web Browser"
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-gradient"></div>
+    <div class="noise-overlay"></div>
+    
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🎨 ThumbnailAI</h1>
+                <span class="tagline">High-Conversion Thumbnail Generator</span>
+            </div>
+            <nav class="nav">
+                <a href="#generator" class="nav-link">Generator</a>
+                <a href="#examples" class="nav-link">Examples</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Create <span class="gradient-text">High-Converting</span> YouTube Thumbnails with AI
+                    </h1>
+                    <p class="hero-description">
+                        Generate thumbnails that get clicks. Our AI analyzes top-performing videos to create thumbnails optimized for maximum engagement and click-through rates.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">300%</span>
+                            <span class="stat-label">Average CTR Increase</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50M+</span>
+                            <span class="stat-label">Thumbnails Analyzed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-label">Uptime</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="generator" class="generator-section">
+            <div class="container">
+                <div class="generator-grid">
+                    <div class="input-panel">
+                        <div class="panel-header">
+                            <h2>Video Details</h2>
+                            <p>Tell us about your video to generate optimized thumbnails</p>
+                        </div>
+                        
+                        <form id="thumbnailForm" class="input-form">
+                            <div class="form-group">
+                                <label for="videoTitle">Video Title *</label>
+                                <input type="text" id="videoTitle" placeholder="Enter your video title..." required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="videoDescription">Description (Optional)</label>
+                                <textarea id="videoDescription" placeholder="Brief description of your video content..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="videoCategory">Category</label>
+                                <select id="videoCategory">
+                                    <option value="gaming">Gaming</option>
+                                    <option value="education">Education</option>
+                                    <option value="entertainment">Entertainment</option>
+                                    <option value="lifestyle">Lifestyle</option>
+                                    <option value="tech">Technology</option>
+                                    <option value="finance">Finance</option>
+                                    <option value="fitness">Fitness</option>
+                                    <option value="music">Music</option>
+                                    <option value="news">News</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="targetAudience">Target Audience</label>
+                                <select id="targetAudience">
+                                    <option value="13-17">Teens (13-17)</option>
+                                    <option value="18-24">Young Adults (18-24)</option>
+                                    <option value="25-34">Adults (25-34)</option>
+                                    <option value="35-44">Middle Age (35-44)</option>
+                                    <option value="45+">Mature (45+)</option>
+                                    <option value="all">All Ages</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="referenceImage">Reference Image (Optional)</label>
+                                <div class="file-upload">
+                                    <input type="file" id="referenceImage" accept="image/*">
+                                    <div class="file-upload-area">
+                                        <span class="upload-icon">📷</span>
+                                        <span class="upload-text">Click to upload or drag & drop</span>
+                                        <span class="upload-subtext">PNG, JPG up to 10MB</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Thumbnail Styles</label>
+                                <div class="style-options">
+                                    <label class="style-option">
+                                        <input type="checkbox" name="styles" value="dramatic" checked>
+                                        <span class="style-card">
+                                            <span class="style-emoji">🔥</span>
+                                            <span class="style-name">Dramatic</span>
+                                        </span>
+                                    </label>
+                                    <label class="style-option">
+                                        <input type="checkbox" name="styles" value="minimal" checked>
+                                        <span class="style-card">
+                                            <span class="style-emoji">✨</span>
+                                            <span class="style-name">Minimal</span>
+                                        </span>
+                                    </label>
+                                    <label class="style-option">
+                                        <input type="checkbox" name="styles" value="bold" checked>
+                                        <span class="style-card">
+                                            <span class="style-emoji">💥</span>
+                                            <span class="style-name">Bold</span>
+                                        </span>
+                                    </label>
+                                    <label class="style-option">
+                                        <input type="checkbox" name="styles" value="professional">
+                                        <span class="style-card">
+                                            <span class="style-emoji">💼</span>
+                                            <span class="style-name">Professional</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="generate-btn" id="generateBtn">
+                                <span class="btn-text">Generate Thumbnails</span>
+                                <span class="btn-loader"></span>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="results-panel">
+                        <div class="panel-header">
+                            <h2>Generated Thumbnails</h2>
+                            <p>AI-optimized thumbnails ready for A/B testing</p>
+                        </div>
+                        
+                        <div id="thumbnailResults" class="results-grid">
+                            <div class="placeholder-message">
+                                <div class="placeholder-icon">🎨</div>
+                                <h3>Ready to Create</h3>
+                                <p>Fill in your video details and click "Generate Thumbnails" to see AI-powered results.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="analysisResults" class="analysis-panel" style="display: none;">
+                            <h3>AI Analysis & Recommendations</h3>
+                            <div id="analysisContent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="examples" class="examples-section">
+            <div class="container">
+                <h2 class="section-title">Before & After Examples</h2>
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <div class="example-before">
+                            <img src="https://via.placeholder.com/320x180/ff6b6b/ffffff?text=Before" alt="Before">
+                            <span class="example-label">Before</span>
+                            <span class="example-ctr">2.1% CTR</span>
+                        </div>
+                        <div class="example-arrow">→</div>
+                        <div class="example-after">
+                            <img src="https://via.placeholder.com/320x180/4ecdc4/ffffff?text=AI+Generated" alt="After">
+                            <span class="example-label">AI Generated</span>
+                            <span class="example-ctr">8.7% CTR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ThumbnailAI. Powered by advanced AI technology.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
